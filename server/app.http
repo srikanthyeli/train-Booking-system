@@ -1,0 +1,68 @@
+POST http://localhost:3002/register/
+Content-Type: application/json 
+
+{
+    "Email":"user123@gmail",
+    "UserName":"prasu",
+    "Password":"1234567"
+}
+
+###
+POST http://localhost:3002/login/
+Content-Type: application/json
+
+{
+    "UserName":"prasu",
+    "Password":"1234567"
+}
+
+###
+POST http://localhost:3002/trains/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InByYXN1IiwiaWF0IjoxNzIyNzczNTE3fQ.9MgZmKg_cODA5zPMoGEXhZhrXihiW16L7avKlwq5y6M
+
+{
+    "TrainName":"madhurai-Express",
+    "Source":"chennai",
+    "Destination":"ongole",
+    "SeatCapacity":20,
+    "ArrivalTimeAtSource":"11:00:00",
+    "ArrivalTimeAtDestination":"13:00:00"
+}
+
+###
+GET http://localhost:3002/trains/availability/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InByYXN1IiwiaWF0IjoxNzIyNzczNTE3fQ.9MgZmKg_cODA5zPMoGEXhZhrXihiW16L7avKlwq5y6M
+
+{
+    "Source":"vinukonda",
+    "Destination":"Guntur"
+}
+
+###
+GET http://localhost:3002/trains/2/book/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InByYXN1IiwiaWF0IjoxNzIyNzczNTE3fQ.9MgZmKg_cODA5zPMoGEXhZhrXihiW16L7avKlwq5y6M
+
+{
+    "userId":"2",
+    "noOfSeats":"4"
+}
+
+###
+GET http://localhost:3002/booking/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InByYXN1IiwiaWF0IjoxNzIyNzczNTE3fQ.9MgZmKg_cODA5zPMoGEXhZhrXihiW16L7avKlwq5y6M
+
+
+
+
+
+
+
+
+
+
+
+
